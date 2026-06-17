@@ -1,20 +1,36 @@
-#Version 1 (Start Here)
-##Use:
--Classes
--Constructors
--ArrayList
--Loops
--Scanner
--No SQL, no file handling.
+#Version 1 (Start Here)  
 
-#Version 2
-##Add:
--Exception Handling
--Save data in a text file
+##Use:  
 
-#Version 3
-##Add:
--MySQL
--JDBC
+-Classes  
 
-**cuurently in version 1 development** 
+-Constructors  
+
+-ArrayList  
+
+-Loops  
+
+-Scanner  
+
+-No SQL, no file handling.  
+
+
+#Version 2  
+
+##Add:  
+
+-Exception Handling  
+
+-Save data in a text file  
+
+
+#Version 3  
+
+##Add:  
+
+-MySQL  
+
+-JDBC  
+
+
+**curently in version 1 development** 
