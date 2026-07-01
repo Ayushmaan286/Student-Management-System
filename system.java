@@ -38,8 +38,9 @@ public class system extends management
                     obj.delete_student();
                     break;
                 case 6:
-                    // sc.close();
-                    break;
+                    System.out.println("Thank You !!");
+                    sc.close();
+                    return;
 
                 default:
                     System.out.println(" Wrong choice ");
