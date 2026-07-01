@@ -68,8 +68,6 @@ public class system extends management
 
     void add_student() {
 
-        
-
         System.out.print("ID: ");
         id=sc.nextInt();
 
@@ -110,6 +108,7 @@ public class system extends management
            System.out.println("Name:"+name_array[i]);
            System.out.println("Age:"+age_array[i]);
            System.out.println("Course:"+course_array[i]);
+           System.out.println("==================================");
          }
         }
         else
@@ -207,10 +206,37 @@ public class system extends management
     }
 
     void delete_student() {
+        int found=0;
+        int loop=0;
         System.out.println("Enter ID to be deleted ");
-        
-        
+        int del_id=sc.nextInt();
+        for( int i=0;i<count_entry;i++)
+        {
+            if(id_array[i]==del_id)
+            {
+               found=1;
+               loop=i;
+               break;     
+            }
+        }
+        if(found==0)
+        {
+            System.out.println("ID does not exist");       
+        }
+        else
+        {
+            for(int i=loop;i<(count_entry-1);i++)
+            {
+              id_array[i]=id_array[i+1];
+              name_array[i]=name_array[i+1];
+              age_array[i]=age_array[i+1];
+              course_array[i]=course_array[i+1];         
+            }
+             count_entry--;
+             System.out.println("Deletion Successful");
 
+        }
+        
     }
 
     
