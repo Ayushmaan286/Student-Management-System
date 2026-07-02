@@ -1,4 +1,4 @@
-Current Bugs:  
+Bugs(in version 1):  
 
 1. Duplicate ID are allowed    
 2. Array can overflow 

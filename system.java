@@ -59,6 +59,7 @@ public class system extends management
     private int id,age;
     private String name,course;
     private int count_entry=0;
+    
 
     int id_array[]=new int[100];
     String name_array[]=new String[100];
@@ -68,6 +69,13 @@ public class system extends management
     Scanner sc= new Scanner(System.in);
 
     void add_student() {
+
+        if(count_entry>99) //bug 2 sorted 
+        {
+            System.out.println("Database is full");
+            return;
+        }
+            
 
         System.out.print("ID: ");
         id=sc.nextInt();
@@ -95,6 +103,8 @@ public class system extends management
         course_array[count_entry]=course;
 
         count_entry++;
+        
+        
 
     }
 
