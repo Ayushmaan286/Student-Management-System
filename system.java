@@ -45,11 +45,11 @@ public class system extends management
                 default:
                     System.out.println(" Wrong choice ");
                     break;
-
+                
             }
-
-
+            
         }
+        sc.close();
 
     }
 }
@@ -91,6 +91,12 @@ public class system extends management
 
         System.out.print("Age(18-70): ");
         age=sc.nextInt();
+        while(age<18 || age>70)
+        {
+            System.out.println("Age must be between 18-70(Both inclusive) !!!!!!!!");
+            System.out.print("Age: ");
+            age=sc.nextInt();
+        }
 
         age_array[count_entry]=age;
 

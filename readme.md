@@ -1,8 +1,8 @@
 Bugs(in version 1):  
 
 1. Duplicate ID are allowed    
-2. Array can overflow 
-3. No validation on age  
+2. Array can overflow   (Solved)
+3. No validation on age   (Solved) 
 4. Course accepts anything  
 5. Name can be empty 
 6. Update all doesnt print anything    
