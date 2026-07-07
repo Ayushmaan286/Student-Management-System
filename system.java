@@ -18,9 +18,26 @@ public class system extends management
             System.out.println("4. Update Students");
             System.out.println("5. Delete Students");
             System.out.println("6. Exit");
+            int input=-1;
+            try
+            {
+                 input = sc.nextInt();
+            }
+            catch(Exception e)
+            {
+                System.out.println("Try Again");
+                sc.nextLine();
+                try
+                {
+                  input = sc.nextInt();
+                }
+                 catch(Exception e1)
+                {
+                System.out.print("===============Program Terminated==============");
+                System.exit(0); 
+                }
+            }
             
-            
-            int input = sc.nextInt();
             switch (input) {
                 case 1:
                     obj.add_student();
@@ -78,24 +95,61 @@ public class system extends management
             
 
         System.out.print("ID: ");
-        id=sc.nextInt();
-
+        try
+        {
+            id=sc.nextInt();                    
+        }
+        catch(Exception e)
+        {
+            System.out.println("please try again" );
+            sc.nextLine();
+            add_student();
+        }
         id_array[count_entry]=id;
 
         sc.nextLine(); //solved the bug that int takes only the digital part and ignores the "\n" inserted by the OS
 
         System.out.print("Name(FULL NAME): ");
-        name=sc.nextLine();
-
+        try
+        {
+            name=sc.nextLine().toUpperCase();           
+        }
+        catch(Exception e)
+        {
+            System.out.println("please try again" );
+            sc.nextLine();
+            add_student();
+        }
+        
         name_array[count_entry]=name;
 
         System.out.print("Age(18-70): ");
-        age=sc.nextInt();
+        try
+        {
+            age=sc.nextInt();
+        }
+        catch(Exception e)
+        {
+            System.out.println("please try again" );
+            sc.nextLine();
+            add_student();
+            
+        }
+
         while(age<18 || age>70)
         {
             System.out.println("Age must be between 18-70(Both inclusive) !!!!!!!!");
             System.out.print("Age: ");
+            try
+           {
             age=sc.nextInt();
+           }
+            catch(Exception e)
+           {
+            System.out.println("please try again" );
+            sc.nextLine();
+            add_student();
+           }
         }
 
         age_array[count_entry]=age;
@@ -103,15 +157,35 @@ public class system extends management
         sc.nextLine(); //solved the bug that int takes only the digital part and ignores the "\n" inserted by the OS
 
 
-        System.out.print("Course (CSE/IT/ME/EE/EEE/CE): ");
-        course=sc.nextLine();
-
+        System.out.print("Course (1.CSE/2.IT/3.ME/4.EE/5.EEE/6.CE)(Enter corresponding number): ");
+        int course_choice=sc.nextInt();
+        sc.nextLine();
+        switch(course_choice)
+        {
+            case 1:
+                course="CSE";
+                break;
+            case 2:
+                course="IT";
+                break;
+            case 3:
+                course="ME";
+                break;
+            case 4:
+                course="EE";
+                break;
+            case 5:
+                course="EEE";
+                break;
+            case 6:
+                course="CE";
+                break;
+            default:
+                course="null";
+        }
         course_array[count_entry]=course;
 
         count_entry++;
-        
-        
-
     }
 
     void view_student() {
